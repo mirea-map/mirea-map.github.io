@@ -34,7 +34,12 @@ PARALLAX STUFF
 	animation: 400s linear infinite;
 	z-index: -1;
 }
-
+img{
+	max-width: 300px;
+}
+.leaflet-popup-content{
+	width: 300px !important;
+}
 .layer1 {background-image: url("../Parallax/layer1.png");}
 .layer2 {background-image: url("../Parallax/layer2.png");}
 .layer3 {background-image: url("../Parallax/layer3.png");}

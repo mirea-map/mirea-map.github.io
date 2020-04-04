@@ -11,7 +11,7 @@
     <meta property="og:description" content="Интерактивная веб-карта майнкрафт сервера РТУ МИРЭА." />
     <meta property="og:type" content="article" />
 
-    <link rel="stylesheet" href="Files/css/main.min.css">
+    <link rel="stylesheet" href="Files/css/main.css">
     <link rel="stylesheet" href="Files/css/materialize.min.css">
     <link rel="stylesheet" href="Files/css/leaflet.min.css">
 
@@ -34,17 +34,29 @@
             "crs": L.CRS.Simple
         };
         const image_config = {
-            "map":[{"z":1,"url":"C:/Users/Oniel/AppData/Roaming/.minecraft/screenshots/2020-04-04_12.02.01_~Minecraft_overworld_day.png"}],
+            "map":[{"z":1,"url":"Files/map.png"}],
             "pipenet":[]
         };
+        
         var webmap = L.map('webmap', map_config);
         webmap.fitBounds(bounds);
         webmap.setMaxBounds(bounds);
-
+        var marker = L.marker([-108.5, 284.50]).addTo(webmap);
         var lazylayers = bakeLayers(image_config, webmap, bounds);
+        var mirea = L.polygon([
+            [-157.5, 290.08],
+            [-80.5, 290.08],
+            [-80.5, 335],
+            [-157.5, 335]
+            
+        ]).addTo(webmap);
+        
+        webmap.attributionControl.setPrefix("<a href='https://vk.com/onie1'/>Oniel</a>");
 
-        webmap.attributionControl.setPrefix('Oniel');
-
+        // POPUPS
+        
+        marker.bindPopup("<img src='Files/images/PicasaPhotoViewer_BxNZokb6JC.png' alt='альтернативный текст'>");
+        mirea.bindPopup("РТУ МИРЭА [просп. Вернадского, 78.]");
     </script>
 </body>
 
