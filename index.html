@@ -42,6 +42,8 @@
         webmap.fitBounds(bounds);
         webmap.setMaxBounds(bounds);
         var marker = L.marker([-108.5, 284.50]).addTo(webmap);
+        var karpov = L.marker([-106.5, 308.50]).addTo(webmap);
+        var viktoriya = L.marker([-96.5, 277.50]).addTo(webmap);
         var lazylayers = bakeLayers(image_config, webmap, bounds);
         var mirea = L.polygon([
             [-160.5, 290.08],
@@ -56,6 +58,8 @@
         // POPUPS
         
         marker.bindPopup("<img src='Files/images/PicasaPhotoViewer_BxNZokb6JC.png' alt='Ректор'>");
+        karpov.bindPopup("<img src='Files/images/karpov.png' alt='Карпов'>");
+        viktoriya.bindPopup("<img src='Files/images/viktoriya.png' alt='Виктория 24'>");
         mirea.bindPopup("РТУ МИРЭА [просп. Вернадского, 78.]");
     </script>
 </body>
