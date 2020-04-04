@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MIREA MAP - веб-карта майнкрафт сервера</title>
+    
+    <!-- Metadata -->
+    <meta name="description" content="Интерактивная веб-карта майнкрафт сервера РТУ МИРЭА" />
+
+    <meta property="og:title" content="MIREA MAP" />
+    <meta property="og:description" content="Интерактивная веб-карта майнкрафт сервера РТУ МИРЭА." />
+    <meta property="og:type" content="article" />
+
+    <link rel="stylesheet" href="Files/css/main.min.css">
+    <link rel="stylesheet" href="Files/css/materialize.min.css">
+    <link rel="stylesheet" href="Files/css/leaflet.min.css">
+
+    <script src="Files/leaflet.js"></script>
+    <script src="Files/coords.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+   
+</head>
+
+<body style="background: #1d1d1d;">
+    <div id="layer" style="background: #4a4a4a;"></div>
+    <div id="webmap"></div>
+    <script type="text/javascript">
+        const bounds = [[0, 0], [-255, 455]];
+        const map_config = {
+            "minZoom":2, "maxZoom":6,
+            "center": [-128, 128], "zoom": 2,
+            "crs": L.CRS.Simple
+        };
+        const image_config = {
+            "map":[{"z":1,"url":"C:/Users/Oniel/AppData/Roaming/.minecraft/screenshots/2020-04-04_12.02.01_~Minecraft_overworld_day.png"}],
+            "pipenet":[]
+        };
+        var webmap = L.map('webmap', map_config);
+        webmap.fitBounds(bounds);
+        webmap.setMaxBounds(bounds);
+
+        var lazylayers = bakeLayers(image_config, webmap, bounds);
+
+        webmap.attributionControl.setPrefix('Oniel');
+
+    </script>
+</body>
+
+</html>
