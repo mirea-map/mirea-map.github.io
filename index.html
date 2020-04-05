@@ -52,6 +52,20 @@
             [-160.5, 355]
             
         ]).addTo(webmap);
+        var mgupi = L.polygon([
+            [-98.5, 190.08],
+            [-68.5, 190.08],
+            [-68.5, 215],
+            [-98.5, 215]
+            
+        ]).addTo(webmap);
+        var school = L.polygon([
+            [-190.5, 140.08],
+            [-170.5, 140.08],
+            [-170.5, 160],
+            [-190.5, 160]
+            
+        ]).addTo(webmap);
         
         webmap.attributionControl.setPrefix("<a href='https://vk.com/onie1'/>Oniel</a>");
 
@@ -60,7 +74,9 @@
         marker.bindPopup("<img src='Files/images/PicasaPhotoViewer_BxNZokb6JC.png' alt='Ректор'>");
         karpov.bindPopup("<img src='Files/images/karpov.png' alt='Карпов'>");
         viktoriya.bindPopup("<img src='Files/images/viktoriya.png' alt='Виктория 24'>");
-        mirea.bindPopup("РТУ МИРЭА [просп. Вернадского, 78.]");
+        mirea.bindPopup("МИРЭА");
+        school.bindPopup("МБОУ СОШ №25");
+        mgupi.bindPopup("МГУПИ");
     </script>
 </body>
 
