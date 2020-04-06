@@ -41,15 +41,15 @@
         var webmap = L.map('webmap', map_config);
         webmap.fitBounds(bounds);
         webmap.setMaxBounds(bounds);
-        var marker = L.marker([-108.5, 284.50]).addTo(webmap);
-        var karpov = L.marker([-106.5, 308.50]).addTo(webmap);
-        var viktoriya = L.marker([-96.5, 277.50]).addTo(webmap);
+        var marker = L.marker([-81.5, 312.50]).addTo(webmap);
+        var karpov = L.marker([-80, 332.50]).addTo(webmap);
+        var viktoriya = L.marker([-72.5, 307.00]).addTo(webmap);
         var lazylayers = bakeLayers(image_config, webmap, bounds);
         var mirea = L.polygon([
-            [-160.5, 290.08],
-            [-68.5, 290.08],
-            [-68.5, 355],
-            [-160.5, 355]
+            [-120.5, 320.08],
+            [-45.5, 320.08],
+            [-45.5, 370],
+            [-120.5, 370]
             
         ]).addTo(webmap);
         var mgupi = L.polygon([
