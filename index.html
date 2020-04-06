@@ -27,7 +27,7 @@
     <div id="layer" style="background: #4a4a4a;"></div>
     <div id="webmap"></div>
     <script type="text/javascript">
-        const bounds = [[0, 0], [-255, 455]];
+        const bounds = [[0, 0], [-255, 415]];
         const map_config = {
             "minZoom":2, "maxZoom":6,
             "center": [-128, 128], "zoom": 2,
@@ -41,29 +41,29 @@
         var webmap = L.map('webmap', map_config);
         webmap.fitBounds(bounds);
         webmap.setMaxBounds(bounds);
-        var marker = L.marker([-81.5, 312.50]).addTo(webmap);
-        var karpov = L.marker([-80, 332.50]).addTo(webmap);
-        var viktoriya = L.marker([-72.5, 307.00]).addTo(webmap);
+        var marker = L.marker([-81.5, 284.50]).addTo(webmap);
+        var karpov = L.marker([-80, 303.50]).addTo(webmap);
+        var viktoriya = L.marker([-72.5, 280.00]).addTo(webmap);
         var lazylayers = bakeLayers(image_config, webmap, bounds);
         var mirea = L.polygon([
-            [-120.5, 320.08],
-            [-45.5, 320.08],
-            [-45.5, 370],
-            [-120.5, 370]
+            [-120.5, 290.08],
+            [-45.5, 290.08],
+            [-45.5, 340],
+            [-120.5, 340]
             
         ]).addTo(webmap);
         var mgupi = L.polygon([
-            [-98.5, 190.08],
-            [-68.5, 190.08],
-            [-68.5, 215],
-            [-98.5, 215]
+            [-98.5, 170.08],
+            [-68.5, 170.08],
+            [-68.5, 195],
+            [-98.5, 195]
             
         ]).addTo(webmap);
         var school = L.polygon([
-            [-190.5, 140.08],
-            [-170.5, 140.08],
-            [-170.5, 160],
-            [-190.5, 160]
+            [-190.5, 125.08],
+            [-170.5, 125.08],
+            [-170.5, 145],
+            [-190.5, 145]
             
         ]).addTo(webmap);
         
